@@ -1,10 +1,10 @@
 import './Chart.scss'
-import React, { PureComponent } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+
+import { AreaChart, Area, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
 
-const Chart = () => {
+const Chart = ({title,aspect}) => {
 
   const data = [
     { name: "January", Total: 1200 },
@@ -16,8 +16,8 @@ const Chart = () => {
   ];
   return (
     <div className='chart'>
-      <div className='title' stroke='red'>Last 6 Month [income]</div>
-      <ResponsiveContainer width="100%" aspect={2/1}>
+      <div className='title' stroke='red'>{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
       <AreaChart width={730} height={250} data={data}
   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
   <defs>
