@@ -1,4 +1,4 @@
-import Chart from '../../components/chart/Chart'
+import Chart from '../../components/chart-old/Chart'
 import Navbar from '../../components/navbar/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import List from '../../components/table/Table'
